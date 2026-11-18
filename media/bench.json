@@ -4,196 +4,196 @@
     "cores": 2,
     "version": "0.0.0.0"
   },
-  "exe_mb": 11.95,
+  "exe_mb": 11.98,
   "fullscreen_foreground": false,
-  "started": "2026-11-18T02:13:31.7086635+00:00",
+  "started": "2026-11-18T14:12:43.5216150+00:00",
   "scenarios": {
     "idle": {
-      "cpu": 0.0,
-      "ws": 7.8,
-      "startup_ms": 177.0,
+      "cpu": 0.007,
+      "ws": 8.1,
+      "startup_ms": 140.0,
       "goroutines": 2.0,
-      "heap_mb": 2.8,
-      "p95_ms": 8.66,
+      "heap_mb": 2.9,
+      "p95_ms": 2.98,
       "runs": [
         {
-          "cpu": 0.02,
+          "cpu": 0.007,
           "ws": 8.1,
-          "startup_ms": 177,
-          "goroutines": 3,
-          "heap_mb": 2.8,
-          "p95_ms": 8.66,
+          "startup_ms": 162,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 2.98,
           "frames": 9
         },
         {
-          "cpu": 0.0,
-          "ws": 7.8,
-          "startup_ms": 510,
+          "cpu": 0.013,
+          "ws": 8.1,
+          "startup_ms": 111,
           "goroutines": 2,
-          "heap_mb": 2.8,
-          "p95_ms": 13.762,
-          "frames": 6
+          "heap_mb": 2.9,
+          "p95_ms": 3.171,
+          "frames": 12
         },
         {
-          "cpu": 0.0,
-          "ws": 7.8,
-          "startup_ms": 118,
+          "cpu": 0.007,
+          "ws": 8.1,
+          "startup_ms": 140,
           "goroutines": 2,
           "heap_mb": 2.8,
-          "p95_ms": 1.449,
+          "p95_ms": 2.892,
           "frames": 12
         }
       ]
     },
     "pomodoro": {
-      "cpu": 0.065,
+      "cpu": 0.091,
       "ws": 8.6,
-      "startup_ms": 104.0,
+      "startup_ms": 117.0,
       "goroutines": 2.0,
       "heap_mb": 2.9,
-      "p95_ms": 0.731,
+      "p95_ms": 0.896,
       "runs": [
+        {
+          "cpu": 0.091,
+          "ws": 8.7,
+          "startup_ms": 90,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 1.675,
+          "frames": 320
+        },
         {
           "cpu": 0.072,
           "ws": 8.6,
-          "startup_ms": 97,
+          "startup_ms": 120,
           "goroutines": 2,
           "heap_mb": 2.9,
-          "p95_ms": 0.808,
-          "frames": 348
+          "p95_ms": 0.817,
+          "frames": 336
         },
         {
-          "cpu": 0.046,
-          "ws": 8.7,
-          "startup_ms": 104,
-          "goroutines": 2,
-          "heap_mb": 2.9,
-          "p95_ms": 0.644,
-          "frames": 347
-        },
-        {
-          "cpu": 0.065,
+          "cpu": 0.091,
           "ws": 8.6,
-          "startup_ms": 125,
+          "startup_ms": 117,
           "goroutines": 2,
           "heap_mb": 2.9,
-          "p95_ms": 0.731,
-          "frames": 345
+          "p95_ms": 0.896,
+          "frames": 341
         }
       ]
     },
     "shelf": {
       "cpu": 0.007,
       "ws": 8.0,
-      "startup_ms": 99.0,
+      "startup_ms": 106.0,
       "goroutines": 2.0,
       "heap_mb": 2.9,
-      "p95_ms": 2.837,
+      "p95_ms": 3.379,
       "runs": [
         {
-          "cpu": 0.0,
+          "cpu": 0.013,
           "ws": 8.0,
-          "startup_ms": 99,
+          "startup_ms": 107,
           "goroutines": 2,
           "heap_mb": 2.9,
-          "p95_ms": 2.837,
-          "frames": 12
+          "p95_ms": 3.379,
+          "frames": 13
         },
         {
-          "cpu": 0.013,
-          "ws": 8.2,
-          "startup_ms": 90,
+          "cpu": 0.007,
+          "ws": 8.3,
+          "startup_ms": 100,
           "goroutines": 2,
           "heap_mb": 2.9,
-          "p95_ms": 2.786,
+          "p95_ms": 2.553,
           "frames": 13
         },
         {
           "cpu": 0.007,
           "ws": 8.0,
-          "startup_ms": 115,
+          "startup_ms": 106,
           "goroutines": 2,
           "heap_mb": 2.9,
-          "p95_ms": 8.551,
+          "p95_ms": 5.749,
           "frames": 11
         }
       ]
     },
     "sleep": {
-      "cpu": 0.007,
-      "ws": 8.4,
-      "startup_ms": 87.0,
+      "cpu": 0.013,
+      "ws": 8.5,
+      "startup_ms": 94.0,
       "goroutines": 2.0,
-      "heap_mb": 2.8,
-      "p95_ms": 3.031,
+      "heap_mb": 2.9,
+      "p95_ms": 4.459,
       "runs": [
         {
           "cpu": 0.0,
+          "ws": 9.8,
+          "startup_ms": 104,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 4.459,
+          "frames": 15
+        },
+        {
+          "cpu": 0.02,
           "ws": 8.3,
-          "startup_ms": 92,
+          "startup_ms": 88,
           "goroutines": 2,
-          "heap_mb": 2.8,
-          "p95_ms": 3.031,
-          "frames": 14
+          "heap_mb": 2.9,
+          "p95_ms": 7.63,
+          "frames": 15
         },
         {
-          "cpu": 0.007,
-          "ws": 8.4,
-          "startup_ms": 86,
+          "cpu": 0.013,
+          "ws": 8.5,
+          "startup_ms": 94,
           "goroutines": 2,
-          "heap_mb": 2.8,
-          "p95_ms": 7.165,
-          "frames": 18
-        },
-        {
-          "cpu": 0.007,
-          "ws": 8.4,
-          "startup_ms": 87,
-          "goroutines": 2,
-          "heap_mb": 2.8,
-          "p95_ms": 1.619,
-          "frames": 16
+          "heap_mb": 2.9,
+          "p95_ms": 2.05,
+          "frames": 15
         }
       ]
     },
     "demo": {
-      "cpu": 0.078,
-      "ws": 20.8,
-      "startup_ms": 88.0,
+      "cpu": 0.143,
+      "ws": 21.0,
+      "startup_ms": 105.0,
       "goroutines": 2.0,
       "heap_mb": 3.0,
-      "p95_ms": 0.697,
+      "p95_ms": 0.822,
       "runs": [
         {
-          "cpu": 0.143,
-          "ws": 22.1,
-          "startup_ms": 88,
+          "cpu": 0.15,
+          "ws": 22.0,
+          "startup_ms": 105,
           "goroutines": 2,
-          "heap_mb": 2.9,
-          "p95_ms": 0.697,
+          "heap_mb": 3.1,
+          "p95_ms": 0.879,
           "frames": 445
         },
         {
           "cpu": 0.078,
-          "ws": 20.0,
-          "startup_ms": 88,
-          "goroutines": 2,
-          "heap_mb": 3.1,
-          "p95_ms": 0.738,
-          "frames": 443
-        },
-        {
-          "cpu": 0.065,
-          "ws": 20.8,
-          "startup_ms": 96,
+          "ws": 20.3,
+          "startup_ms": 92,
           "goroutines": 2,
           "heap_mb": 3.0,
-          "p95_ms": 0.689,
-          "frames": 443
+          "p95_ms": 0.712,
+          "frames": 444
+        },
+        {
+          "cpu": 0.143,
+          "ws": 21.0,
+          "startup_ms": 111,
+          "goroutines": 2,
+          "heap_mb": 3.0,
+          "p95_ms": 0.822,
+          "frames": 444
         }
       ]
     }
   },
   "failures": [],
-  "finished": "2026-11-18T03:04:34.0499755+00:00"
+  "finished": "2026-11-18T15:03:45.6666324+00:00"
 }
