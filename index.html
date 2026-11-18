@@ -4,210 +4,222 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Nuppi — a living notch for Windows</title>
-  <meta name="description" content="Nuppi puts a living notch at the top of your Windows screen: music with synced lyrics, a focus timer, to-dos, a shelf for files and your clipboard, prayer times and widgets, guarded by Kopi the black cat. Free for Windows 10 and 11.">
-  <meta name="theme-color" content="#14163a">
+  <meta name="description" content="Nuppi puts a living notch at the top of your Windows screen: music with synced lyrics, a focus timer, to-dos, Ask AI on any selected text, a shelf for files and your clipboard, prayer times and widgets, guarded by Kopi the pixel cat. Free for Windows 10 and 11.">
+  <meta name="theme-color" content="#F4EFE7">
   <link rel="canonical" href="https://nuppi-notch.github.io/">
   <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png">
   <link rel="icon" type="image/png" sizes="256x256" href="media/icon.png">
   <link rel="apple-touch-icon" href="media/icon.png">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Nuppi — a living notch for Windows">
-  <meta property="og:description" content="Music, lyrics, focus, to-dos, a shelf, prayer times and widgets in a notch at the top of your screen. Free for Windows 10 and 11.">
+  <meta property="og:description" content="Music, lyrics, focus, to-dos, Ask AI, a shelf, prayer times and widgets in a notch at the top of your screen. Free for Windows 10 and 11.">
   <meta property="og:url" content="https://nuppi-notch.github.io/">
   <meta property="og:image" content="https://nuppi-notch.github.io/media/og.png">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
   <header class="bar">
-    <a class="brand" href="#top" aria-label="Nuppi home">
-      <img src="media/icon.png" alt="" width="28" height="28" class="pixel">
+    <a class="brand" href="#top" aria-label="Nuppi">
+      <img src="media/icon.png" alt="" width="30" height="30" class="pixel">
       <span>Nuppi</span>
     </a>
-    <nav class="links" aria-label="Sections">
-      <a href="#features" data-i18n="nav.features">Features</a>
-      <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+    <nav class="links" aria-label="Features">
+      <a href="#day" data-i18n="nav.day">A day with Nuppi</a>
+      <a href="#ai" data-i18n="nav.ai">Ask AI</a>
     </nav>
     <div class="bar-end">
-      <button class="lang" type="button" aria-label="Bahasa Indonesia / English"><span data-l="en">EN</span><span data-l="id">ID</span></button>
-      <a class="btn btn-small" href="https://github.com/Adytm404/nuppi-releases/releases/latest/download/NuppiSetup.exe" data-i18n="cta.short">Download</a>
+      <nav class="links" aria-label="About">
+        <a href="#bench" data-i18n="nav.bench">Benchmark</a>
+        <a href="#privacy" data-i18n="nav.privacy">Privacy</a>
+      </nav>
+      <button class="lang" type="button" aria-label="Language: English / Bahasa Indonesia"><span data-l="en">EN</span><span data-l="id">ID</span></button>
     </div>
   </header>
 
-  <main id="top">
-    <section class="hero">
-      <div class="notch-stage" aria-hidden="true">
-        <div class="notch" tabindex="-1">
-          <img class="notch-closed" src="media/closed_timer.png" alt="" width="376" height="40">
-          <img class="notch-open" src="media/home.png" alt="" width="588" height="208">
-        </div>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="notch" aria-hidden="true">
+        <img class="notch-closed" src="media/closed_timer.png" alt="" width="376" height="40">
+        <img class="notch-open" src="media/home.png" alt="" width="588" height="208" fetchpriority="high">
       </div>
-      <div class="hero-copy">
-        <p class="kicker" data-i18n="hero.kicker">Free for Windows 10 and 11</p>
+      <div class="hero-grid">
         <h1 data-i18n="hero.title">A living notch<br>for Windows.</h1>
-        <p class="lead" data-i18n="hero.lead">A small black island at the top of your screen. Hover over it for your music and lyrics, focus timer, to-dos, files, clipboard, prayer times and widgets. Kopi the cat keeps watch.</p>
-        <div class="ctas">
-          <a class="btn" href="https://github.com/Adytm404/nuppi-releases/releases/latest/download/NuppiSetup.exe">
+        <div class="hero-side">
+          <p class="lead" data-i18n="hero.lead">A small black island at the top of your screen. Point at it for your music and lyrics, a focus timer, to-dos, Ask AI, your files and clipboard, prayer times and widgets. Kopi the cat keeps watch.</p>
+          <a class="btn" href="https://github.com/nuppi-notch/nuppi-releases/releases/latest/download/NuppiSetup.exe">
             <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 5.5 10 4.5v7H3zm8-1.15L21 3v8.5H11zM3 12.5h7v7l-7-1zm8 0h10V21l-10-1.4z"/></svg>
-            <span data-i18n="cta.main">Download for Windows</span>
+            <span data-i18n="cta">Download for Windows</span>
           </a>
-          <a class="btn btn-ghost" href="#trailer" data-i18n="cta.trailer">Watch the trailer</a>
+          <p class="fine" data-i18n="hero.fine">Free · Windows 10 and 11 · 5.6 MB · no account</p>
         </div>
-        <p class="fine" data-i18n="hero.fine">Free · 5.5 MB installer · no account, no admin rights</p>
       </div>
     </section>
 
-    <section class="trailer" id="trailer" aria-labelledby="trailer-title">
-      <h2 class="sr" id="trailer-title">Trailer</h2>
-      <div class="video-frame">
+    <section class="film" id="trailer" aria-label="Trailer">
+      <div class="film-inner">
         <video controls preload="none" playsinline poster="media/poster.jpg" width="1920" height="1080">
           <source src="media/trailer.mp4" type="video/mp4">
         </video>
+        <p class="film-note" data-i18n="film.note">36 seconds, cut to the music. Every frame is the app itself, drawn by its own renderer with sample data.</p>
       </div>
-      <p class="caption" data-i18n="trailer.caption">Every frame is the app itself, drawn by its own renderer with sample data.</p>
     </section>
 
-    <section class="features" id="features" aria-labelledby="features-title">
-      <div class="section-head">
-        <p class="kicker" data-i18n="features.kicker">What lives in the notch</p>
-        <h2 id="features-title" data-i18n="features.title">Everything you check ten times a day, one hover away.</h2>
+    <section class="day" id="day" aria-labelledby="day-title">
+      <h2 id="day-title" data-i18n="day.title">A day with Nuppi</h2>
+      <p class="intro" data-i18n="day.intro">It sits closed and quiet at the top edge, and opens when you point at it. Here is what it shows through a working day.</p>
+
+      <ol class="stops" role="list">
+        <li class="stop">
+          <p class="when" data-i18n="s1.when">Morning</p>
+          <div class="stop-copy">
+            <h3 data-i18n="s1.t">Focus, with rain on</h3>
+            <p data-i18n="s1.p">Pomodoro rounds that keep going through sleep, a seven-day chart and streaks. Rain, waves, wind or a soft hum play underneath. They are made in code and looped by Windows, so they cost no CPU.</p>
+          </div>
+          <figure class="shot"><img src="media/focus.png" alt="Focus timer at 18:22 with the rain sound on and a seven-day chart" width="588" height="212" loading="lazy"></figure>
+        </li>
+        <li class="stop">
+          <p class="when" data-i18n="s2.when">Before lunch</p>
+          <div class="stop-copy">
+            <h3 data-i18n="s2.t">Your day in one list</h3>
+            <p data-i18n="s2.p">Type “rapat besok 9” or “call mom in 2h” and the due time is set. Checklists inside a task, repeating bills, quick add from anywhere with Ctrl+Alt+N, and your Google Calendar with a Join button for Meet, Zoom and Teams.</p>
+          </div>
+          <figure class="shot"><img src="media/todo.png" alt="To-do with a checklist, a repeating bill and the next calendar event" width="588" height="268" loading="lazy"></figure>
+        </li>
+        <li class="stop">
+          <p class="when" data-i18n="s3.when">After lunch</p>
+          <div class="stop-copy">
+            <h3 data-i18n="s3.t">Home, arranged your way</h3>
+            <p data-i18n="s3.p">The clock, the one thing that matters right now (a meeting, the next prayer, a task due, the song playing) and small widgets you drag, resize, add and remove.</p>
+          </div>
+          <figure class="shot"><img src="media/home.png" alt="Home: the clock with Kopi, the song playing, weather, CPU, battery and to-do on a grid" width="588" height="208" loading="lazy"></figure>
+        </li>
+        <li class="stop">
+          <p class="when" data-i18n="s4.when">Afternoon</p>
+          <div class="stop-copy">
+            <h3 data-i18n="s4.t">Music, with the words</h3>
+            <p data-i18n="s4.p">Whatever plays through the Windows media controls (Spotify, YouTube Music in a browser, and more) with seek, shuffle, volume, and synced lyrics that keep the current line in the middle.</p>
+          </div>
+          <figure class="shot"><img src="media/lyrics.png" alt="Music with synced lyrics, the current line centred" width="708" height="248" loading="lazy"></figure>
+        </li>
+        <li class="stop">
+          <p class="when" data-i18n="s5.when">Before Asr</p>
+          <div class="stop-copy">
+            <h3 data-i18n="s5.t">Prayer times, worked out on your PC</h3>
+            <p data-i18n="s5.p">1,151 cities or your own location, seven calculation methods, the Hijri date and reminders. In Ramadan: imsak and iftar countdowns and a sahur reminder.</p>
+          </div>
+          <figure class="shot"><img src="media/prayer.png" alt="Prayer times for Jakarta with the sun's arc and the next prayer" width="608" height="212" loading="lazy"></figure>
+        </li>
+        <li class="stop">
+          <p class="when" data-i18n="s6.when">All day</p>
+          <div class="stop-copy">
+            <h3 data-i18n="s6.t">A shelf for files and your clipboard</h3>
+            <p data-i18n="s6.p">Drop files, links, text or images on the notch and drag them out later; your files are never moved. The clipboard history is encrypted, searchable and skips password managers. Save snippets to paste again.</p>
+          </div>
+          <figure class="shot"><img src="media/shelf.png" alt="The shelf with files and the clipboard history with a saved snippet" width="668" height="268" loading="lazy"></figure>
+        </li>
+      </ol>
+    </section>
+
+    <section class="ai" id="ai" aria-labelledby="ai-title">
+      <div class="ai-head">
+        <h2 id="ai-title" data-i18n="ai.title">Ask AI, on whatever you selected</h2>
+        <p data-i18n="ai.p">Select text in any app and press <kbd>Ctrl</kbd> <kbd>Alt</kbd> <kbd>Q</kbd>. It lands in the notch with Summarize, Fix, Translate and Reply one click away. Ask in plain words and it can set reminders and to-dos or start a timer, each with Undo. Bring your own provider: OpenAI, Gemini, Groq, OpenRouter, or a local model with Ollama or LM Studio. Keys stay on your PC, encrypted.</p>
       </div>
-
-      <article class="tour">
-        <div class="screen hue-amber"><img src="media/home.png" alt="Home: the clock with Kopi, the song playing, weather, CPU, battery and to-do on a grid" width="588" height="208" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.home.t">Home, arranged your way</h3>
-          <p data-i18n="f.home.p">A grid with the clock, the most pressing thing right now (a meeting, the next prayer, a task due, the song playing) and small widgets for battery, Wi-Fi, weather, CPU, water and more. Drag, resize, add and remove.</p>
-        </div>
-      </article>
-
-      <article class="tour flip">
-        <div class="screen hue-violet"><img src="media/lyrics.png" alt="Music with synced lyrics, the current line centred" width="708" height="248" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.music.t">Music with synced lyrics</h3>
-          <p data-i18n="f.music.p">Now playing from Spotify, YouTube Music in the browser, or any player that uses the Windows media controls. Seek, shuffle, volume, and lyrics that keep the current line in the middle.</p>
-        </div>
-      </article>
-
-      <article class="tour">
-        <div class="screen hue-coral"><img src="media/focus.png" alt="Focus timer at 18:22 with the rain sound on and a seven-day chart" width="588" height="212" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.focus.t">Focus, with rain on</h3>
-          <p data-i18n="f.focus.p">Pomodoro rounds that survive sleep, a seven-day chart and streaks. Rain, waves, wind or a soft hum in the background, made in code and looped by Windows, so they cost no CPU.</p>
-        </div>
-      </article>
-
-      <article class="tour flip">
-        <div class="screen hue-teal"><img src="media/todo.png" alt="To-do with a checklist, a repeating bill and the next calendar event" width="588" height="268" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.todo.t">To-dos that understand you</h3>
-          <p data-i18n="f.todo.p">Type “rapat besok 9” or “call mom in 2h” and the due time is set. Repeating tasks, checklists, quick add from anywhere with Ctrl+Alt+N, and your Google Calendar with a Join button for Meet, Zoom and Teams.</p>
-        </div>
-      </article>
-
-      <article class="tour">
-        <div class="screen hue-blue"><img src="media/shelf.png" alt="The shelf with files and the clipboard history with a saved snippet" width="668" height="268" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.shelf.t">A shelf for files and your clipboard</h3>
-          <p data-i18n="f.shelf.p">Drop files, links, text or images on the notch and drag them out later; your files are never moved. An encrypted, searchable clipboard history that skips password managers, plus snippets you paste again.</p>
-        </div>
-      </article>
-
-      <article class="tour flip">
-        <div class="screen hue-green"><img src="media/prayer.png" alt="Prayer times for Jakarta with the sun's arc and the next prayer" width="608" height="212" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.prayer.t">Prayer times, computed on your PC</h3>
-          <p data-i18n="f.prayer.p">1,151 cities or your own location, seven calculation methods, the Hijri date and reminders. In Ramadan: imsak and iftar countdowns and a sahur reminder.</p>
-        </div>
-      </article>
-
-      <article class="tour">
-        <div class="screen hue-indigo"><img src="media/widgets.png" alt="Widgets: weather for Jakarta and PC usage" width="608" height="212" loading="lazy"></div>
-        <div class="tour-copy">
-          <h3 data-i18n="f.widgets.t">Widgets at a glance</h3>
-          <p data-i18n="f.widgets.p">Weather, PC usage, the week, world clocks, a countdown, the moon phase and more. Closed, the notch stays small and peeks only when something happens.</p>
-        </div>
-      </article>
-
-      <ul class="grid" role="list">
-        <li class="card kopi-card">
-          <img src="media/kopi.png" alt="" width="64" height="64" class="pixel">
-          <h3 data-i18n="g.kopi.t">Kopi the cat</h3>
-          <p data-i18n="g.kopi.p">Blinks, follows your cursor, naps, purrs when petted, and reacts to your music, focus, battery and more.</p>
+      <ol class="ai-steps" role="list">
+        <li>
+          <figure class="shot"><img src="media/ask_quote.png" alt="Ask AI with selected text attached and the Summarize, Fix, Translate and Reply actions" width="626" height="340" loading="lazy"></figure>
+          <p><b data-i18n="ai.1.b">1. Select and press the shortcut.</b> <span data-i18n="ai.1">The text arrives with four quick actions.</span></p>
         </li>
-        <li class="card">
-          <span class="ico" aria-hidden="true" style="--i:url(icons/sparkle.svg)"></span>
-          <h3 data-i18n="g.ask.t">Ask AI</h3>
-          <p data-i18n="g.ask.p">Select text anywhere and press Ctrl+Alt+Q to summarize, fix, translate or reply. Bring your own provider: OpenAI, Gemini, Groq, OpenRouter, Ollama.</p>
+        <li>
+          <figure class="shot"><img src="media/ask.png" alt="A client email summarized into three bullet points" width="626" height="340" loading="lazy"></figure>
+          <p><b data-i18n="ai.2.b">2. One click.</b> <span data-i18n="ai.2">A client's email, summed up in three points.</span></p>
         </li>
-        <li class="card">
-          <span class="ico" aria-hidden="true" style="--i:url(icons/scan.svg)"></span>
-          <h3 data-i18n="g.ocr.t">Copy text from the screen</h3>
-          <p data-i18n="g.ocr.p">Ctrl+Alt+T, drag a box, and the text is on your clipboard. Offline, with Windows OCR.</p>
+        <li>
+          <figure class="shot"><img src="media/ask_agent.png" alt="A request to be reminded, answered with a reminder card and an Undo button" width="626" height="340" loading="lazy"></figure>
+          <p><b data-i18n="ai.3.b">3. Ask it to act.</b> <span data-i18n="ai.3">“Remind me to reply on Friday at 9” sets the reminder, with Undo.</span></p>
         </li>
-        <li class="card">
-          <span class="ico" aria-hidden="true" style="--i:url(icons/bell.svg)"></span>
-          <h3 data-i18n="g.notify.t">Notifications</h3>
-          <p data-i18n="g.notify.p">Windows toasts in the notch, with per-app rules and a privacy mode. One-time codes stay hidden, one tap copies them.</p>
-        </li>
-        <li class="card">
-          <span class="ico" aria-hidden="true" style="--i:url(icons/speaker-high.svg)"></span>
-          <h3 data-i18n="g.overlay.t">System overlays</h3>
-          <p data-i18n="g.overlay.p">Volume, brightness, Caps Lock, input language, charger, Wi-Fi and headphones, shown where your eyes already are.</p>
-        </li>
-        <li class="card">
-          <span class="ico" aria-hidden="true" style="--i:url(icons/palette.svg)"></span>
-          <h3 data-i18n="g.looks.t">Your look</h3>
-          <p data-i18n="g.looks.p">Island or floating, minimal mode, Glass, an accent colour, Indonesian or English. Every option applies live.</p>
-        </li>
+      </ol>
+    </section>
+
+    <section class="kopi" id="kopi" aria-labelledby="kopi-title">
+      <h2 id="kopi-title" data-i18n="kopi.title">Kopi keeps you company</h2>
+      <p class="intro" data-i18n="kopi.intro">A 24-pixel black cat who lives in the notch and reacts to what you are doing. Pet him and he purrs.</p>
+      <ul class="moods" role="list">
+        <li><img src="media/kopi_idle.png" alt="" width="96" height="96" class="pixel" loading="lazy"><p data-i18n="m.idle">Keeps an eye on things</p></li>
+        <li><img src="media/kopi_music.png" alt="" width="96" height="96" class="pixel" loading="lazy"><p data-i18n="m.music">Bobs along to your music</p></li>
+        <li><img src="media/kopi_notif.png" alt="" width="96" height="96" class="pixel" loading="lazy"><p data-i18n="m.notif">Perks up for a notification</p></li>
+        <li><img src="media/kopi_happy.png" alt="" width="96" height="96" class="pixel" loading="lazy"><p data-i18n="m.happy">Cheers when your tasks are done</p></li>
+        <li><img src="media/kopi_sleep.png" alt="" width="96" height="96" class="pixel" loading="lazy"><p data-i18n="m.sleep">Naps at night and while you focus</p></li>
+        <li><img src="media/kopi_tired.png" alt="" width="96" height="96" class="pixel" loading="lazy"><p data-i18n="m.tired">Droops when the battery runs low</p></li>
       </ul>
     </section>
 
-    <section class="light" aria-labelledby="light-title">
-      <div class="section-head">
-        <p class="kicker" data-i18n="light.kicker">Light by design</p>
-        <h2 id="light-title" data-i18n="light.title">Native, small, and quiet when you are not looking.</h2>
+    <section class="bench" id="bench" aria-labelledby="bench-title">
+      <div class="bench-head">
+        <h2 id="bench-title" data-i18n="bench.title">Measured, not promised</h2>
+        <p data-i18n="bench.p">A notch that is always on screen has to be cheap. Every night a test starts the release build on a clean Windows machine, lets it settle, measures CPU and memory from outside the process, and fails if any number goes over its budget.</p>
       </div>
-      <dl class="stats">
-        <div><dt data-i18n="s.size">app size</dt><dd>12 MB</dd></div>
-        <div><dt data-i18n="s.mem">memory at rest</dt><dd>~8 MB</dd></div>
-        <div><dt data-i18n="s.cpu">CPU at rest</dt><dd>~0%</dd></div>
-        <div><dt data-i18n="s.web">web views</dt><dd>0</dd></div>
+      <!-- BENCH:START (written by scripts/site-bench.py from a perf run) -->
+      <table class="bench-table">
+        <thead><tr><th scope="col" data-i18n="b.h.what">What</th><th scope="col" data-i18n="b.h.measured">Measured</th><th scope="col" data-i18n="b.h.budget">Budget</th><th scope="col" data-i18n="b.h.use">Share of budget</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><span data-i18n="b.idle.cpu">CPU at rest</span><small data-i18n="b.idle.cpu.d">Notch closed, nothing moving</small></th><td class="num">0.00%</td><td class="of">0.10%</td><td class="bar-cell"><div class="meter" role="img" aria-label="0%"><i style="width:0.6%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.idle.ws">Memory at rest</span><small data-i18n="b.idle.ws.d">Working set, the RAM Windows reports</small></th><td class="num">7.8 MB</td><td class="of">25 MB</td><td class="bar-cell"><div class="meter" role="img" aria-label="31%"><i style="width:31.2%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.focus.cpu">CPU during a focus round</span><small data-i18n="b.focus.cpu.d">Timer counting down in the notch</small></th><td class="num">0.07%</td><td class="of">0.10%</td><td class="bar-cell"><div class="meter" role="img" aria-label="65%"><i style="width:65.0%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.shelf.ws">Memory with a full shelf</span><small data-i18n="b.shelf.ws.d">100 shelf items and a full clipboard history</small></th><td class="num">8.0 MB</td><td class="of">80 MB</td><td class="bar-cell"><div class="meter" role="img" aria-label="10%"><i style="width:10.0%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.sleep.cpu">CPU while Kopi sleeps</span><small data-i18n="b.sleep.cpu.d">At night, nothing animates</small></th><td class="num">0.01%</td><td class="of">0.05%</td><td class="bar-cell"><div class="meter" role="img" aria-label="14%"><i style="width:14.0%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.frame">Frame time while animating</span><small data-i18n="b.frame.d">95th percentile, scripted animations</small></th><td class="num">0.7 ms</td><td class="of">8 ms</td><td class="bar-cell"><div class="meter" role="img" aria-label="9%"><i style="width:8.7%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.start">Start-up</span><small data-i18n="b.start.d">Launch to first frame</small></th><td class="num">177 ms</td><td class="of">400 ms</td><td class="bar-cell"><div class="meter" role="img" aria-label="44%"><i style="width:44.2%"></i></div></td></tr>
+          <tr><th scope="row"><span data-i18n="b.size">App size</span><small data-i18n="b.size.d">nuppi.exe, everything included</small></th><td class="num">11.9 MB</td><td class="of">15 MB</td><td class="bar-cell"><div class="meter" role="img" aria-label="80%"><i style="width:79.7%"></i></div></td></tr>
+        </tbody>
+        <caption data-i18n="b.cap">Median of 3 runs, each measured for 2 minutes after a 1-minute warm-up, on a GitHub Actions windows-latest machine (Windows 10.0.26100.0, 2 cores), 2026-11-18, build a006c3b. CPU is a share of the whole machine. <a href="media/bench.json">Raw results</a>.</caption>
+      </table>
+      <script>window.NUPPI_BENCH_ID = {"b.idle.cpu": "CPU saat diam", "b.idle.cpu.d": "Notch tertutup, tidak ada yang bergerak", "b.idle.ws": "Memori saat diam", "b.idle.ws.d": "Working set, RAM yang dilaporkan Windows", "b.focus.cpu": "CPU saat ronde fokus", "b.focus.cpu.d": "Timer berjalan di notch", "b.shelf.ws": "Memori dengan rak penuh", "b.shelf.ws.d": "100 item rak dan riwayat clipboard penuh", "b.sleep.cpu": "CPU saat Kopi tidur", "b.sleep.cpu.d": "Malam hari, tidak ada animasi", "b.frame": "Waktu frame saat beranimasi", "b.frame.d": "Persentil ke-95, animasi berskrip", "b.start": "Waktu mulai", "b.start.d": "Dari dijalankan sampai frame pertama", "b.size": "Ukuran aplikasi", "b.size.d": "nuppi.exe, sudah termasuk semuanya", "b.h.what": "Yang diukur", "b.h.measured": "Hasil", "b.h.budget": "Batas", "b.h.use": "Porsi dari batas", "b.cap": "Median dari 3 kali uji, masing-masing diukur 2 menit setelah pemanasan 1 menit, di mesin GitHub Actions windows-latest (Windows 10.0.26100.0, 2 core), 2026-11-18, build a006c3b. CPU dihitung dari seluruh mesin. <a href=\"media/bench.json\">Hasil mentah</a>."};</script>
+      <!-- BENCH:END -->
+    </section>
+
+    <section class="more" aria-labelledby="more-title">
+      <h2 id="more-title" data-i18n="more.title">And the small things</h2>
+      <dl class="more-list">
+        <div><dt data-i18n="x.ocr.t">Copy text from the screen</dt><dd data-i18n="x.ocr">Ctrl+Alt+T, drag a box, and the text is on your clipboard. Offline, with Windows OCR.</dd></div>
+        <div><dt data-i18n="x.notif.t">Notifications</dt><dd data-i18n="x.notif">Windows toasts in the notch, with per-app rules and a privacy mode. One-time codes stay hidden until you copy them.</dd></div>
+        <div><dt data-i18n="x.over.t">System overlays</dt><dd data-i18n="x.over">Volume, brightness, Caps Lock, input language, charger, Wi-Fi and headphones, where your eyes already are.</dd></div>
+        <div><dt data-i18n="x.wid.t">Widgets</dt><dd data-i18n="x.wid">Weather, PC usage, the week, world clocks, a countdown and the moon phase.</dd></div>
+        <div><dt data-i18n="x.water.t">Water</dt><dd data-i18n="x.water">A daily goal with reminders that wait until your focus round ends.</dd></div>
+        <div><dt data-i18n="x.look.t">Your look</dt><dd data-i18n="x.look">Island or floating, minimal mode, Glass, an accent colour, Indonesian or English. Every option applies live.</dd></div>
       </dl>
-      <p class="note" data-i18n="light.note">Written in Go and drawn with Direct2D. No Electron, no WebView, no background polling.</p>
     </section>
 
     <section class="privacy" id="privacy" aria-labelledby="privacy-title">
-      <div class="section-head">
-        <p class="kicker" data-i18n="privacy.kicker">Privacy</p>
-        <h2 id="privacy-title" data-i18n="privacy.title">Your data stays on your PC.</h2>
-      </div>
-      <ul class="checks" role="list">
+      <h2 id="privacy-title" data-i18n="privacy.title">Your data stays on your PC</h2>
+      <ul class="facts" role="list">
         <li data-i18n="p.1">No account, no analytics, no telemetry.</li>
         <li data-i18n="p.2">Clipboard history, chats and API keys are encrypted with Windows DPAPI.</li>
-        <li data-i18n="p.3">The network is used only by features you turn on: lyrics, weather, calendar, Ask and update checks.</li>
+        <li data-i18n="p.3">The network is used only by features you turn on: lyrics, weather, calendar, Ask AI and update checks.</li>
         <li data-i18n="p.4">Every feature can be switched off completely, and your data exported or deleted from Settings.</li>
       </ul>
     </section>
 
-    <section class="download" id="download" aria-labelledby="download-title">
-      <img src="media/kopi.png" alt="" width="96" height="96" class="pixel bob">
-      <h2 id="download-title" data-i18n="dl.title">Put Kopi on top of your screen.</h2>
-      <p data-i18n="dl.p">Free for Windows 10 (1809 or later) and Windows 11. The installer is per user, and Nuppi checks for updates itself.</p>
-      <a class="btn" href="https://github.com/Adytm404/nuppi-releases/releases/latest/download/NuppiSetup.exe">
+    <section class="get" id="download" aria-labelledby="get-title">
+      <img src="media/kopi_idle.png" alt="" width="112" height="112" class="pixel">
+      <h2 id="get-title" data-i18n="get.title">Put Kopi on top of your screen</h2>
+      <p data-i18n="get.p">Free for Windows 10 (1809 or later) and Windows 11. It installs for your user only, no admin rights, and checks for updates itself.</p>
+      <a class="btn" href="https://github.com/nuppi-notch/nuppi-releases/releases/latest/download/NuppiSetup.exe">
         <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M3 5.5 10 4.5v7H3zm8-1.15L21 3v8.5H11zM3 12.5h7v7l-7-1zm8 0h10V21l-10-1.4z"/></svg>
-        <span data-i18n="cta.main">Download for Windows</span>
+        <span data-i18n="cta">Download for Windows</span>
       </a>
-      <p class="fine" data-i18n="dl.smartscreen">The build is not code-signed yet, so SmartScreen may warn: choose More info, then Run anyway. Each release lists its SHA-256.</p>
+      <p class="fine" data-i18n="get.fine">The build is not code-signed yet, so SmartScreen may warn: choose More info, then Run anyway. Each release lists its SHA-256.</p>
     </section>
   </main>
 
   <footer class="foot">
-    <span>© 2026 Nuppi</span>
-    <a href="https://github.com/Adytm404/nuppi-releases/releases" data-i18n="foot.releases">Releases</a>
+    <span>Nuppi</span>
+    <a href="https://github.com/nuppi-notch/nuppi-releases/releases" data-i18n="foot.releases">All releases</a>
     <span data-i18n="foot.formerly">Formerly Atap</span>
   </footer>
 

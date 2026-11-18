@@ -1,0 +1,199 @@
+{
+  "machine": {
+    "os": "Microsoft Windows NT 10.0.26100.0",
+    "cores": 2,
+    "version": "0.0.0.0"
+  },
+  "exe_mb": 11.95,
+  "fullscreen_foreground": false,
+  "started": "2026-11-18T02:13:31.7086635+00:00",
+  "scenarios": {
+    "idle": {
+      "cpu": 0.0,
+      "ws": 7.8,
+      "startup_ms": 177.0,
+      "goroutines": 2.0,
+      "heap_mb": 2.8,
+      "p95_ms": 8.66,
+      "runs": [
+        {
+          "cpu": 0.02,
+          "ws": 8.1,
+          "startup_ms": 177,
+          "goroutines": 3,
+          "heap_mb": 2.8,
+          "p95_ms": 8.66,
+          "frames": 9
+        },
+        {
+          "cpu": 0.0,
+          "ws": 7.8,
+          "startup_ms": 510,
+          "goroutines": 2,
+          "heap_mb": 2.8,
+          "p95_ms": 13.762,
+          "frames": 6
+        },
+        {
+          "cpu": 0.0,
+          "ws": 7.8,
+          "startup_ms": 118,
+          "goroutines": 2,
+          "heap_mb": 2.8,
+          "p95_ms": 1.449,
+          "frames": 12
+        }
+      ]
+    },
+    "pomodoro": {
+      "cpu": 0.065,
+      "ws": 8.6,
+      "startup_ms": 104.0,
+      "goroutines": 2.0,
+      "heap_mb": 2.9,
+      "p95_ms": 0.731,
+      "runs": [
+        {
+          "cpu": 0.072,
+          "ws": 8.6,
+          "startup_ms": 97,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 0.808,
+          "frames": 348
+        },
+        {
+          "cpu": 0.046,
+          "ws": 8.7,
+          "startup_ms": 104,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 0.644,
+          "frames": 347
+        },
+        {
+          "cpu": 0.065,
+          "ws": 8.6,
+          "startup_ms": 125,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 0.731,
+          "frames": 345
+        }
+      ]
+    },
+    "shelf": {
+      "cpu": 0.007,
+      "ws": 8.0,
+      "startup_ms": 99.0,
+      "goroutines": 2.0,
+      "heap_mb": 2.9,
+      "p95_ms": 2.837,
+      "runs": [
+        {
+          "cpu": 0.0,
+          "ws": 8.0,
+          "startup_ms": 99,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 2.837,
+          "frames": 12
+        },
+        {
+          "cpu": 0.013,
+          "ws": 8.2,
+          "startup_ms": 90,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 2.786,
+          "frames": 13
+        },
+        {
+          "cpu": 0.007,
+          "ws": 8.0,
+          "startup_ms": 115,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 8.551,
+          "frames": 11
+        }
+      ]
+    },
+    "sleep": {
+      "cpu": 0.007,
+      "ws": 8.4,
+      "startup_ms": 87.0,
+      "goroutines": 2.0,
+      "heap_mb": 2.8,
+      "p95_ms": 3.031,
+      "runs": [
+        {
+          "cpu": 0.0,
+          "ws": 8.3,
+          "startup_ms": 92,
+          "goroutines": 2,
+          "heap_mb": 2.8,
+          "p95_ms": 3.031,
+          "frames": 14
+        },
+        {
+          "cpu": 0.007,
+          "ws": 8.4,
+          "startup_ms": 86,
+          "goroutines": 2,
+          "heap_mb": 2.8,
+          "p95_ms": 7.165,
+          "frames": 18
+        },
+        {
+          "cpu": 0.007,
+          "ws": 8.4,
+          "startup_ms": 87,
+          "goroutines": 2,
+          "heap_mb": 2.8,
+          "p95_ms": 1.619,
+          "frames": 16
+        }
+      ]
+    },
+    "demo": {
+      "cpu": 0.078,
+      "ws": 20.8,
+      "startup_ms": 88.0,
+      "goroutines": 2.0,
+      "heap_mb": 3.0,
+      "p95_ms": 0.697,
+      "runs": [
+        {
+          "cpu": 0.143,
+          "ws": 22.1,
+          "startup_ms": 88,
+          "goroutines": 2,
+          "heap_mb": 2.9,
+          "p95_ms": 0.697,
+          "frames": 445
+        },
+        {
+          "cpu": 0.078,
+          "ws": 20.0,
+          "startup_ms": 88,
+          "goroutines": 2,
+          "heap_mb": 3.1,
+          "p95_ms": 0.738,
+          "frames": 443
+        },
+        {
+          "cpu": 0.065,
+          "ws": 20.8,
+          "startup_ms": 96,
+          "goroutines": 2,
+          "heap_mb": 3.0,
+          "p95_ms": 0.689,
+          "frames": 443
+        }
+      ]
+    }
+  },
+  "failures": [],
+  "finished": "2026-11-18T03:04:34.0499755+00:00"
+}
