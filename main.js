@@ -56,7 +56,7 @@
     "x.ocr.t": "Salin teks dari layar",
     "x.ocr": "Ctrl+Alt+T, tarik kotak, dan teksnya sudah di clipboard. Offline, dengan OCR Windows.",
     "x.notif.t": "Notifikasi",
-    "x.notif": "Notifikasi Windows tampil di notch, dengan aturan per aplikasi dan mode privasi. Kode sekali pakai tetap tersembunyi sampai kamu salin.",
+    "x.notif": "Notifikasi WhatsApp, Telegram, dan lainnya tampil di notch, dengan isi pesan sampai dua baris. Pilih tampilkan judul dan isi, judul saja, atau nama aplikasi saja. Kode sekali pakai tetap tersembunyi sampai kamu salin.",
     "x.over.t": "Overlay sistem",
     "x.over": "Volume, kecerahan, Caps Lock, bahasa input, charger, Wi-Fi, dan headphone, tampil di tempat matamu sudah melihat.",
     "x.wid.t": "Widget",
