@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nuppi privacy policy</title>
+  <meta name="description" content="What Nuppi stores on your PC and what it sends over the internet. No account, no analytics, no telemetry.">
+  <meta name="theme-color" content="#F4EFE7">
+  <link rel="canonical" href="https://nuppi-notch.github.io/privacy.html">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --paper: #f4efe7; --ink: #1a1612; --muted: #5b5249; --line: #d9cfc1; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 400 17px/1.6 "Plus Jakarta Sans", system-ui, sans-serif; }
+    main { max-width: 760px; margin: 0 auto; padding: 32px 16px 64px; }
+    a { color: var(--ink); text-underline-offset: 3px; }
+    .home { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; text-decoration: none; }
+    .home img { image-rendering: pixelated; }
+    h1, h2 { font-family: "Bricolage Grotesque", system-ui, sans-serif; line-height: 1.15; }
+    h1 { font-size: clamp(32px, 6vw, 48px); font-weight: 800; margin: 32px 0 8px; }
+    h2 { font-size: 22px; font-weight: 700; margin: 36px 0 8px; }
+    .meta { color: var(--muted); margin: 0 0 8px; }
+    .table { overflow-x: auto; }
+    table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 520px; }
+    th, td { text-align: left; vertical-align: top; padding: 10px 12px 10px 0; border-bottom: 1px solid var(--line); }
+    th { font-weight: 700; }
+    code { font-size: 0.92em; }
+    hr { border: 0; border-top: 1.5px solid var(--ink); margin: 56px 0 0; }
+  </style>
+</head>
+<body>
+  <main>
+    <a class="home" href="./"><img src="media/icon.png" alt="" width="28" height="28">Nuppi</a>
+
+    <article lang="en">
+      <h1>Privacy policy</h1>
+      <p class="meta">Last updated 19 November 2026. <a href="#id">Baca dalam Bahasa Indonesia</a>.</p>
+      <p>Nuppi is a notch app for Windows. It has no account, no analytics and no telemetry. Your data stays on your PC, and nothing is sent anywhere unless you use a feature that needs the internet.</p>
+
+      <h2>What Nuppi stores on your PC</h2>
+      <p>Settings, to-dos, water and focus history, shelf items, chats with Ask AI and calendar settings are kept in your Windows user profile. API keys, your iCal URL and the clipboard history are encrypted with Windows DPAPI for your user account. They are never exported and never written to the logs. Logs hold no clipboard text, notification text or messages.</p>
+      <p>Settings &gt; Privacy and data can export your data, import it again, or delete all of it. Uninstalling the Microsoft Store version removes its data with it.</p>
+
+      <h2>What Nuppi sends over the internet</h2>
+      <p>Only these requests, and only while you use the feature:</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Where</th><th>When</th><th>What is sent</th></tr></thead>
+          <tbody>
+            <tr><td><code>lrclib.net</code></td><td>You open the lyrics of a song that is not cached yet</td><td>Title, artist, album, length</td></tr>
+            <tr><td>The AI provider you set up</td><td>You send a message, test the connection or list models</td><td>What you typed, local tool results, a screenshot only when you attach one, your API key</td></tr>
+            <tr><td>Frankfurter, <code>open.er-api.com</code></td><td>A currency conversion with rates older than 24 hours</td><td>Currency codes</td></tr>
+            <tr><td>Your iCal URL</td><td>Every 30 minutes while the calendar is on</td><td>A plain request</td></tr>
+            <tr><td>Open-Meteo</td><td>Every 30 minutes while a weather widget is shown</td><td>Your prayer city's or location's coordinates, rounded to about 1 km</td></tr>
+            <tr><td>GitHub</td><td>The installer version only: once a day while "Check for updates" is on, and when you click "Download and install"</td><td>A plain request</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The Microsoft Store version does not check GitHub: the Store installs its updates, under <a href="https://privacy.microsoft.com/privacystatement">Microsoft's privacy statement</a>.</p>
+
+      <h2>Your location</h2>
+      <p>Prayer times' "My location" button asks Windows for your position once, with Windows' own permission prompt. Nuppi rounds it to about 1 km and keeps it in your settings for prayer times. The rounded position goes only to Open-Meteo, and only while a weather widget is shown.</p>
+
+      <h2>Notifications, clipboard and keyboard</h2>
+      <p>To show your Windows notifications in the notch, Nuppi reads them from Windows' notification database, read-only. The clipboard history is kept only on your PC, encrypted. The keyboard hook used by the Caps Lock and input language overlays looks only at those keys, passes every key on unchanged and stores nothing. Each of these features can be turned off.</p>
+
+      <h2>Children</h2>
+      <p>Nuppi collects no personal information from anyone, children included.</p>
+
+      <h2>Changes and contact</h2>
+      <p>Changes to this policy are published on this page with a new date. Questions: open an issue at <a href="https://github.com/nuppi-notch/nuppi-releases/issues">github.com/nuppi-notch/nuppi-releases</a>.</p>
+    </article>
+
+    <hr>
+
+    <article lang="id" id="id">
+      <h1>Kebijakan privasi</h1>
+      <p class="meta">Terakhir diperbarui 19 November 2026.</p>
+      <p>Nuppi adalah aplikasi notch untuk Windows. Tidak ada akun, analitik, atau telemetri. Data kamu tetap di PC kamu, dan tidak ada yang dikirim ke mana pun kecuali kamu memakai fitur yang butuh internet.</p>
+
+      <h2>Yang disimpan Nuppi di PC kamu</h2>
+      <p>Pengaturan, to-do, riwayat minum dan fokus, isi shelf, obrolan Ask AI, dan pengaturan kalender disimpan di profil pengguna Windows kamu. API key, URL iCal, dan riwayat clipboard dienkripsi dengan Windows DPAPI untuk akun pengguna kamu. Semuanya tidak pernah diekspor dan tidak pernah ditulis ke log. Log tidak berisi teks clipboard, notifikasi, atau pesan.</p>
+      <p>Pengaturan &gt; Privasi dan data bisa mengekspor data kamu, mengimpornya lagi, atau menghapus semuanya. Menghapus versi Microsoft Store juga menghapus datanya.</p>
+
+      <h2>Yang dikirim Nuppi lewat internet</h2>
+      <p>Hanya permintaan berikut, dan hanya saat kamu memakai fiturnya:</p>
+      <div class="table">
+        <table>
+          <thead><tr><th>Ke mana</th><th>Kapan</th><th>Yang dikirim</th></tr></thead>
+          <tbody>
+            <tr><td><code>lrclib.net</code></td><td>Kamu membuka lirik lagu yang belum ada di cache</td><td>Judul, artis, album, durasi</td></tr>
+            <tr><td>Penyedia AI yang kamu atur</td><td>Kamu mengirim pesan, menguji koneksi, atau melihat daftar model</td><td>Yang kamu ketik, hasil alat lokal, tangkapan layar hanya jika kamu lampirkan, API key kamu</td></tr>
+            <tr><td>Frankfurter, <code>open.er-api.com</code></td><td>Konversi mata uang dengan kurs lebih dari 24 jam</td><td>Kode mata uang</td></tr>
+            <tr><td>URL iCal kamu</td><td>Tiap 30 menit selama kalender aktif</td><td>Permintaan biasa</td></tr>
+            <tr><td>Open-Meteo</td><td>Tiap 30 menit selama widget cuaca tampil</td><td>Koordinat kota salat atau lokasi kamu, dibulatkan sekitar 1 km</td></tr>
+            <tr><td>GitHub</td><td>Hanya versi installer: sekali sehari selama "Cek pembaruan" aktif, dan saat kamu klik "Unduh dan pasang"</td><td>Permintaan biasa</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>Versi Microsoft Store tidak menghubungi GitHub: pembaruannya dipasang oleh Store, di bawah <a href="https://privacy.microsoft.com/privacystatement">pernyataan privasi Microsoft</a>.</p>
+
+      <h2>Lokasi kamu</h2>
+      <p>Tombol "Lokasi saya" di jadwal salat meminta posisi ke Windows sekali, dengan izin dari Windows sendiri. Nuppi membulatkannya sekitar 1 km dan menyimpannya di pengaturan untuk jadwal salat. Posisi yang sudah dibulatkan itu hanya dikirim ke Open-Meteo, dan hanya selama widget cuaca tampil.</p>
+
+      <h2>Notifikasi, clipboard, dan keyboard</h2>
+      <p>Untuk menampilkan notifikasi Windows di notch, Nuppi membacanya dari database notifikasi Windows, hanya baca. Riwayat clipboard hanya disimpan di PC kamu, terenkripsi. Hook keyboard untuk overlay Caps Lock dan bahasa input hanya melihat tombol-tombol itu, meneruskan setiap tombol tanpa diubah, dan tidak menyimpan apa pun. Setiap fitur ini bisa dimatikan.</p>
+
+      <h2>Anak-anak</h2>
+      <p>Nuppi tidak mengumpulkan informasi pribadi dari siapa pun, termasuk anak-anak.</p>
+
+      <h2>Perubahan dan kontak</h2>
+      <p>Perubahan kebijakan ini diterbitkan di halaman ini dengan tanggal baru. Pertanyaan: buka issue di <a href="https://github.com/nuppi-notch/nuppi-releases/issues">github.com/nuppi-notch/nuppi-releases</a>.</p>
+    </article>
+  </main>
+</body>
+</html>

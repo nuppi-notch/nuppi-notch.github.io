@@ -75,6 +75,7 @@
     "get.p": "Gratis untuk Windows 10 (1809 ke atas) dan Windows 11. Terpasang hanya untuk akunmu, tanpa hak admin, dan mengecek update sendiri.",
     "get.fine": "Build-nya belum ditandatangani, jadi SmartScreen mungkin memperingatkan: pilih Info selengkapnya, lalu Tetap jalankan. Setiap rilis mencantumkan SHA-256-nya.",
     "foot.releases": "Semua rilis",
+    "foot.privacy": "Kebijakan privasi",
     "foot.formerly": "Dulu bernama Atap"
   };
   // The benchmark table's own strings (written by scripts/site-bench.py).
