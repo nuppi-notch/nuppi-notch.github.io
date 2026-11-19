@@ -41,7 +41,11 @@ kbd {
   position: absolute; inset: 0 0 auto; z-index: 3;
   display: flex; align-items: center; gap: 28px;
   padding: 14px var(--gutter);
+  /* The bar spans the page over the notch: only its own links and
+     buttons take clicks, the rest falls through to the notch's tabs. */
+  pointer-events: none;
 }
+.bar a, .bar button { pointer-events: auto; }
 .brand { display: flex; align-items: center; gap: 9px; text-decoration: none; font: 800 20px/1 var(--display); }
 .links { display: flex; gap: 22px; }
 .links a { text-decoration: none; color: var(--muted); font-size: 15px; font-weight: 500; }
