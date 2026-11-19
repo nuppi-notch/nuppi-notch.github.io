@@ -5,6 +5,7 @@
 
   var id = {
     "skip": "Lewati ke konten",
+    "sim.hint": "Coba: klik tab-nya",
     "nav.day": "Sehari dengan Nuppi",
     "nav.ai": "Tanya AI",
     "nav.bench": "Benchmark",
@@ -117,4 +118,97 @@
     notch.classList.add("shut");
     setTimeout(function () { notch.classList.remove("shut"); }, 900);
   }
+
+  // The simulation: each tab of the notch shows that page's render. Tabs
+  // are real buttons placed over the image from sim.json (positions in
+  // the image's CSS pixels), so they work with the keyboard too.
+  var simImg = document.getElementById("sim-img");
+  var simTabs = document.querySelector(".sim-tabs");
+  var stage = document.querySelector(".notch-stage");
+  if (!simImg || !simTabs || !window.fetch) return;
+  var pages = [], current = "home";
+  var alts = {
+    home: "Home: the clock with Kopi, the song playing and small widgets",
+    music: "Music: the song playing with its album art and controls",
+    focus: "Focus: a timer with rain on and a seven-day chart",
+    todo: "To-do: tasks with a checklist, a repeating bill and the next event",
+    shelf: "Shelf: files to drag out later and the clipboard history",
+    water: "Water: today's glasses against the daily goal",
+    prayer: "Prayer times for Jakarta with the next prayer",
+    widgets: "Widgets: weather and PC usage",
+    ask: "Ask AI: a client's email summed up in three points",
+    notify: "Notifications from WhatsApp in the notch"
+  };
+
+  function hintH() {
+    var hint = stage.querySelector(".sim-hint");
+    return hint ? hint.getBoundingClientRect().height + 8 : 0;
+  }
+
+  function byId(id) {
+    for (var i = 0; i < pages.length; i++) if (pages[i].id === id) return pages[i];
+    return null;
+  }
+
+  // The stage takes the open page's height and eases to the next one, so
+  // the notch grows and shrinks like the app's and the text below glides
+  // instead of jumping.
+  function fit() {
+    var p = byId(current);
+    if (!p) return;
+    notch.style.width = "min(" + p.size[0] + "px, 100%)";
+    var room = stage.getBoundingClientRect().width;
+    var h = p.size[1] * Math.min(1, room / p.size[0]);
+    var px = Math.ceil(h + hintH()) + "px";
+    stage.style.height = px;
+    document.documentElement.style.setProperty("--stage-h", px); // the phone bar sits below it
+  }
+
+  function show(id, focus) {
+    var p = byId(id);
+    if (!p) return;
+    current = id;
+    simImg.src = "media/sim/" + p.src;
+    simImg.width = p.size[0];
+    simImg.height = p.size[1];
+    simImg.alt = alts[id] || p.title;
+    simTabs.innerHTML = "";
+    p.tabs.forEach(function (t) {
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "sim-tab";
+      b.setAttribute("role", "tab");
+      b.setAttribute("aria-selected", t.id === id ? "true" : "false");
+      b.setAttribute("aria-label", (byId(t.id) || {}).title || t.id);
+      b.tabIndex = t.id === id ? 0 : -1;
+      b.style.left = (t.box[0] / p.size[0] * 100) + "%";
+      b.style.top = (t.box[1] / p.size[1] * 100) + "%";
+      b.style.width = (t.box[2] / p.size[0] * 100) + "%";
+      b.style.height = (t.box[3] / p.size[1] * 100) + "%";
+      b.addEventListener("click", function () { show(t.id, true); });
+      simTabs.appendChild(b);
+      if (focus && t.id === id) b.focus();
+    });
+    fit();
+  }
+
+  // Left and right move between tabs, like a tab list should.
+  simTabs.addEventListener("keydown", function (e) {
+    if (e.key !== "ArrowLeft" && e.key !== "ArrowRight") return;
+    var i = pages.indexOf(byId(current));
+    i = (i + (e.key === "ArrowRight" ? 1 : pages.length - 1)) % pages.length;
+    show(pages[i].id, true);
+    e.preventDefault();
+  });
+  window.addEventListener("resize", fit);
+
+  fetch("media/sim/sim.json").then(function (r) { return r.json(); }).then(function (list) {
+    pages = list;
+    list.forEach(function (p) {
+      new Image().src = "media/sim/" + p.src; // warm the cache: switches are instant
+    });
+    // "#notch-ask" opens the notch on that page (a link can point at one).
+    var m = /^#notch-([a-z]+)$/.exec(location.hash);
+    show(m && byId(m[1]) ? m[1] : "home", false);
+  }).catch(function () { /* the still image stays */ });
 })();

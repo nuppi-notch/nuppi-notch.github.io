@@ -43,9 +43,15 @@
 
   <main id="main">
     <section class="hero" id="top">
-      <div class="notch" aria-hidden="true">
-        <img class="notch-closed" src="media/closed_timer.png" alt="" width="376" height="40">
-        <img class="notch-open" src="media/home.png" alt="" width="588" height="208" fetchpriority="high">
+      <!-- A working copy of the notch: its tabs switch between real renders
+           of each page (media/sim, written by `go run ./scripts/shots -sim`). -->
+      <div class="notch-stage">
+        <div class="notch">
+          <img class="notch-closed" src="media/closed_timer.png" alt="" width="376" height="40">
+          <img class="notch-open" id="sim-img" src="media/sim/home.png" alt="The notch open on Home: the clock with Kopi, the song playing and small widgets" width="588" height="208" fetchpriority="high">
+          <div class="sim-tabs" role="tablist" aria-label="Notch pages"></div>
+        </div>
+        <p class="sim-hint" data-i18n="sim.hint">Try it: click the tabs</p>
       </div>
       <div class="hero-grid">
         <h1 data-i18n="hero.title">A living notch<br>for Windows.</h1>

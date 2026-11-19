@@ -65,12 +65,21 @@ kbd {
 
 /* Hero: the real notch hangs from the top edge of the page. */
 .hero { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) clamp(56px, 8vw, 104px); }
-.notch { position: relative; width: min(588px, 100%); margin: 0 auto; aspect-ratio: 588 / 208; }
-.notch img { position: absolute; top: 0; left: 50%; transform: translateX(-50%); transition: opacity 0.3s ease, transform 0.5s cubic-bezier(.2, .9, .25, 1.12); }
-.notch-open { width: 100%; transform-origin: 50% 0; }
-.notch-closed { width: 64%; opacity: 0; }
-.notch.shut .notch-open { opacity: 0; transform: translateX(-50%) scale(0.62, 0.2); }
+/* The notch is a small simulation: its tabs switch between real renders
+   of each page, and its width follows the page like the app's does. */
+.notch-stage { display: flex; flex-direction: column; align-items: center; transition: height 0.3s cubic-bezier(.2, .9, .25, 1); }
+.notch { position: relative; width: min(588px, 100%); transition: width 0.3s cubic-bezier(.2, .9, .25, 1); }
+.notch img { display: block; transition: opacity 0.3s ease, transform 0.5s cubic-bezier(.2, .9, .25, 1.12); }
+.notch-open { width: 100%; height: auto; transform-origin: 50% 0; }
+.notch-closed { position: absolute; top: 0; left: 50%; width: 64%; opacity: 0; transform: translateX(-50%); }
+.notch.shut .notch-open { opacity: 0; transform: scale(0.62, 0.2); }
 .notch.shut .notch-closed { opacity: 1; }
+.notch.shut .sim-tabs { visibility: hidden; }
+.sim-tabs { position: absolute; inset: 0; }
+.sim-tab { position: absolute; padding: 0; border: 0; border-radius: 999px; background: transparent; cursor: pointer; }
+.sim-tab:hover { background: rgba(255, 255, 255, 0.08); }
+.sim-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.sim-hint { margin-top: 10px; color: var(--muted); font-size: 13px; }
 .hero-grid { display: grid; grid-template-columns: 1.5fr 1fr; gap: clamp(24px, 5vw, 72px); align-items: end; margin-top: clamp(40px, 7vw, 88px); }
 .hero h1 { font-size: clamp(46px, 7vw, 96px); font-weight: 800; letter-spacing: -0.045em; }
 .hero-side { display: grid; gap: 22px; justify-items: start; padding-bottom: 8px; }
@@ -159,7 +168,7 @@ kbd {
 }
 @media (max-width: 760px) {
   /* The notch takes the whole top edge; the bar moves just under it. */
-  .bar { top: calc((100vw - 2 * var(--gutter)) * 0.354 + 4px); padding-top: 0; }
+  .bar { top: calc(var(--stage-h, 40vw) + 4px); padding-top: 0; transition: top 0.3s cubic-bezier(.2, .9, .25, 1); }
   .hero-grid { margin-top: 72px; }
   .bench-table thead { display: none; }
   .bench-table tr { display: grid; grid-template-columns: 1fr auto; gap: 6px 12px; padding: 14px 0; border-top: 1px solid var(--line); }
@@ -175,5 +184,5 @@ kbd {
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .notch img, .btn { transition: none; }
+  .notch-stage, .notch, .notch img, .btn, .bar { transition: none; }
 }
