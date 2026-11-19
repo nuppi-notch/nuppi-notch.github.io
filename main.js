@@ -61,7 +61,7 @@
     "x.over.t": "Overlay sistem",
     "x.over": "Volume, kecerahan, Caps Lock, bahasa input, charger, Wi-Fi, dan headphone, tampil di tempat matamu sudah melihat.",
     "x.wid.t": "Widget",
-    "x.wid": "Cuaca, pemakaian PC, minggu ini, jam dunia, hitung mundur, dan fase bulan.",
+    "x.wid": "Cuaca, pemakaian PC, baterai headset dan mouse, minggu ini, jam dunia, hitung mundur, dan fase bulan.",
     "x.water.t": "Minum",
     "x.water": "Target harian dengan pengingat yang menunggu sampai ronde fokusmu selesai.",
     "x.look.t": "Tampilan sesukamu",
