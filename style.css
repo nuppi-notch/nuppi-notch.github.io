@@ -65,6 +65,11 @@ kbd {
 }
 .btn:hover { transform: translateY(-2px); }
 .btn:active { transform: none; }
+/* The installer and the Microsoft Store badge side by side. */
+.ctas { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.store { display: inline-flex; border-radius: 6px; transition: transform 0.12s ease; }
+.store img { display: block; height: 52px; width: auto; }
+.store:hover { transform: translateY(-2px); }
 .fine { color: var(--muted); font-size: 14px; }
 
 /* Hero: the real notch hangs from the top edge of the page. */
@@ -154,6 +159,7 @@ kbd {
 .get h2 { font-size: clamp(36px, 5.8vw, 68px); font-weight: 800; }
 .get > p:not(.fine) { color: #3b342c; max-width: 520px; }
 .get .fine { max-width: 520px; }
+.get .ctas { justify-content: center; }
 
 .foot { display: flex; flex-wrap: wrap; gap: 8px 24px; justify-content: center; padding: 24px var(--gutter) 40px; border-top: 1px solid var(--line); color: var(--muted); font-size: 14px; }
 .foot a { text-decoration-color: var(--line); text-underline-offset: 3px; }
@@ -184,9 +190,11 @@ kbd {
   body { font-size: 16px; }
   .moods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .btn { width: 100%; justify-content: center; }
+  .ctas { flex-direction: column; align-items: stretch; }
+  .store { justify-content: center; }
   .hero-side { justify-items: stretch; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .notch-stage, .notch, .notch img, .btn, .bar { transition: none; }
+  .notch-stage, .notch, .notch img, .btn, .store, .bar { transition: none; }
 }

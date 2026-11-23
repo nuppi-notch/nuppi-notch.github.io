@@ -28,7 +28,7 @@
     "s3.p": "Jam, satu hal yang paling penting saat ini (rapat, salat berikutnya, tugas jatuh tempo, lagu yang diputar), dan widget kecil yang bisa kamu geser, ubah ukuran, tambah, dan hapus.",
     "s4.when": "Sore",
     "s4.t": "Musik, lengkap dengan liriknya",
-    "s4.p": "Apa pun yang diputar lewat kontrol media Windows (Spotify, YouTube Music di browser, dan lainnya) dengan geser posisi, acak, volume, dan lirik tersinkron yang menjaga baris aktif di tengah.",
+    "s4.p": "Apa pun yang diputar lewat kontrol media Windows (Spotify, YouTube Music di browser, dan lainnya) dengan geser posisi, acak, volume, dan lirik tersinkron yang menjaga baris aktif di tengah. Nyalakan lirik di notch tertutup, dan baris yang sedang dinyanyikan muncul tepat di bawahnya.",
     "s5.when": "Menjelang Asar",
     "s5.t": "Jadwal salat, dihitung di PC-mu",
     "s5.p": "1.151 kota atau lokasimu sendiri, tujuh metode perhitungan, tanggal Hijriah, dan pengingat. Saat Ramadan: hitung mundur imsak dan buka puasa, serta pengingat sahur.",
@@ -73,7 +73,7 @@
     "p.4": "Setiap fitur bisa dimatikan sepenuhnya, dan datamu bisa diekspor atau dihapus dari Pengaturan.",
     "get.title": "Taruh Kopi di atas layarmu",
     "get.p": "Gratis untuk Windows 10 (1809 ke atas) dan Windows 11. Terpasang hanya untuk akunmu, tanpa hak admin, dan mengecek update sendiri.",
-    "get.fine": "Build-nya belum ditandatangani, jadi SmartScreen mungkin memperingatkan: pilih Info selengkapnya, lalu Tetap jalankan. Setiap rilis mencantumkan SHA-256-nya.",
+    "get.fine": "Versi Microsoft Store ditandatangani Microsoft dan diperbarui lewat Store. Installer-nya belum ditandatangani, jadi SmartScreen mungkin memperingatkan: pilih Info selengkapnya, lalu Tetap jalankan. Setiap rilis mencantumkan SHA-256-nya.",
     "foot.releases": "Semua rilis",
     "foot.privacy": "Kebijakan privasi",
     "foot.formerly": "Dulu bernama Atap"
