@@ -65,7 +65,7 @@
     "x.water.t": "Minum",
     "x.water": "Target harian dengan pengingat yang menunggu sampai ronde fokusmu selesai.",
     "x.look.t": "Tampilan sesukamu",
-    "x.look": "Island atau mengambang, mode minimal, Glass, warna aksen, bahasa Indonesia atau Inggris. Semua pengaturan langsung berlaku.",
+    "x.look": "Tujuh tema, dari Kopi yang hitam pekat sampai Paper yang hangat dan Brutal yang tegas, plus Chameleon yang ikut mode terang atau gelap Windows. Island atau mengambang, mode minimal, warna aksen, bahasa Indonesia atau Inggris. Semua pengaturan langsung berlaku.",
     "privacy.title": "Datamu tetap di PC-mu",
     "p.1": "Tanpa akun, tanpa analytics, tanpa telemetri.",
     "p.2": "Riwayat clipboard, chat, dan API key dienkripsi dengan DPAPI Windows.",
