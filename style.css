@@ -101,8 +101,8 @@ kbd {
 .film-note { margin-top: 14px; font-size: 14px; }
 
 /* A day: a time rail on the left, copy, then the render. */
-.day, .ai, .kopi, .bench, .more, .privacy { max-width: var(--max); margin: 0 auto; padding: clamp(64px, 9vw, 120px) var(--gutter) 0; }
-.day h2, .kopi h2, .more h2, .privacy h2 { font-size: clamp(36px, 5.4vw, 64px); font-weight: 800; }
+.day, .ai, .kopi, .themes, .bench, .more, .privacy { max-width: var(--max); margin: 0 auto; padding: clamp(64px, 9vw, 120px) var(--gutter) 0; }
+.day h2, .kopi h2, .themes h2, .more h2, .privacy h2 { font-size: clamp(36px, 5.4vw, 64px); font-weight: 800; }
 .intro { max-width: 620px; margin-top: 16px; color: var(--muted); font-size: 18px; }
 .stops { list-style: none; margin: clamp(36px, 5vw, 56px) 0 0; padding: 0; }
 .stop {
@@ -125,6 +125,12 @@ kbd {
 .ai-steps b { color: var(--ink); }
 
 /* Kopi's moods: the sprites at whole-pixel scale. */
+/* Themes: the real Home page in each theme. */
+.theme-grid { margin-top: 40px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+.theme-grid figure { margin: 0; }
+.theme-grid img { display: block; width: 100%; height: auto; }
+.theme-grid figcaption { margin-top: 10px; font-size: 15px; color: #3b342c; }
+.theme-grid figcaption b { color: var(--ink); margin-right: 6px; }
 .moods { list-style: none; margin: 40px 0 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 16px; }
 .moods li { display: grid; justify-items: start; gap: 6px; }
 .moods img { width: 96px; height: 96px; margin-left: -10px; }
@@ -189,6 +195,7 @@ kbd {
 @media (max-width: 520px) {
   body { font-size: 16px; }
   .moods { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .theme-grid { grid-template-columns: minmax(0, 1fr); }
   .btn { width: 100%; justify-content: center; }
   .ctas { flex-direction: column; align-items: stretch; }
   .store { justify-content: center; }
